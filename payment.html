@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Магазин мороженого</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="style.css">
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@500&display=swap');
+</style>
+</head>
+<body>
+    <script src="script.js"></script>
+    <header>
+        <h1 onclick="mainPage()">Вкус прохлады</h1>
+        <div class="menu">
+            <a href="index.html#about">О нас</a>
+            <a href="index.html#products">Мороженое</a>
+            <a href="index.html#reviews">Отзывы</a>
+            <a href="#footer">Контакты</a>
+        </div>
+    </header>
+
+    <main class="main-container-init">
+        <section class="info main-box-init">
+            <div>
+                <span class="info-txt">Вернём Вас в детство</span>
+            </div>
+            <div>
+                <img src="img/info.png" class="info-img">
+            </div>
+        </section>
+        
+        <div class="products main-box-init">
+            <h2>Форма заказа</h2>
+            <form class="order">
+                <div><p>Имя <input type="text" required><span></span></p></div>
+                <div><p>Фамилия <input type="text" required></p></div>
+                <div><p>Выберите мороженое <select name="icecream">
+                    <option>Ванильное</option>
+                    <option>Шоколадное</option>
+                    <option>Малиновое</option>
+                    <option>Фисташковое</option>
+                    <option>Карамельное</option>
+                    <option>Смородиновое</option>
+                    <option>Баблгам</option>
+                    <option>Клубничное</option>
+                </select></p></div>
+                <div><p>Номер телефона <input type="tel" required></p></div>
+                <button type="button" onclick="clicker()">Отправить</button>
+        <script>
+            function clicker() {
+              alert("Ваш заказ отправлен на обработку");
+            }
+		</script>
+            </form>
+        </div>
+
+        
+    </main>
+    <!-- Контакты -->
+    <footer id="footer" class="footer">
+        <address>
+            Обратная связь: levitskydanielius@gmail.com
+        </address>
+    </footer>
+</body>
+</html>

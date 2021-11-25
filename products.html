@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Магазин мороженого</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="style.css">
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@500&display=swap');
+</style>
+</head>
+<body>
+    <script src="script.js"></script>
+    <header>
+        <h1 onclick="mainPage()">Вкус прохлады</h1>
+        <div class="menu">
+            <a href="index.html#about">О нас</a>
+            <a href="index.html#products">Мороженое</a>
+            <a href="index.html#reviews">Отзывы</a>
+            <a href="#footer">Контакты</a>
+        </div>
+    </header>
+
+    <main class="main-container-init">
+
+        <!-- каждый продукт в виде карточки, при наведении открывается
+        информация о том, какое же крутое это мороженое -->
+        <!-- а еще кнопки для заказа, которые перекидывают на единую
+        страницу оформления заказа -->
+        <div id="products" class="products main-box-init">
+            <h2 class="products-desc">Все доступные вкусы</h2>
+
+            <section class="products-grid">
+                <article class="product">
+
+                    <p>Ванильный</p>
+                    <img src="img/product1.png" class="product-img">
+                    <p>Нежный ванильный вкус</p>
+                    <button class="product-btn" onclick="paymentPage()">
+                        Заказать
+                    </button>
+                </article>
+    
+                <article class="product">
+
+                    <p>Карамельный</p>
+                    <img src="img/product2.png" class="product-img">
+                    <p>Сладкий и насыщенный</p>
+                    <button class="product-btn" onclick="paymentPage()">
+                        Заказать
+                    </button>
+                </article>
+
+                <article class="product">
+
+                    <p>Шоколадный</p>
+                    <img src="img/product3.png" class="product-img">
+                    <p>Бессмертная классика</p>
+                    <button class="product-btn" onclick="paymentPage()">
+                        Заказать
+                    </button>
+                </article>
+
+                <article class="product">
+
+                    <p>Малиновый</p>
+                    <img src="img/product4.png" class="product-img">
+                    <p>Нежный и сладкий</p>
+                    <button class="product-btn" onclick="paymentPage()">
+                        Заказать
+                    </button>
+                </article>
+
+                <article class="product">
+
+                    <p>Фисташковый</p>
+                    <img src="img/product5.png" class="product-img">
+                    <p>Фисташковый вкус</p>
+                    <button class="product-btn" onclick="paymentPage()">
+                        Заказать
+                    </button>
+                </article>
+
+                <article class="product">
+
+                    <p>Смородиновый</p>
+                    <img src="img/product6.png" class="product-img">
+                    <p>Кислый и яркий вкус</p>
+                    <button class="product-btn" onclick="paymentPage()">
+                        Заказать
+                    </button>
+                </article>
+
+                <article class="product">
+
+                    <p>Баблгам</p>
+                    <img src="img/product7.png" class="product-img">
+                    <p>Экзотичный и свежий</p>
+                    <button class="product-btn" onclick="paymentPage()">
+                        Заказать
+                    </button>
+                </article>
+
+                <article class="product">
+
+                    <p>Клубничное</p>
+                    <img src="img/product8.png" class="product-img">
+                    <p>Сочный и сладкий</p>
+                    <button class="product-btn" onclick="paymentPage()">
+                        Заказать
+                    </button>
+                </article>
+            </section>
+        </div>
+        
+    </main>
+    <!-- Контакты -->
+    <footer id="footer" class="footer">
+        <address>
+            Обратная связь: levitskydanielius@gmail.com
+        </address>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,310 @@
+*{
+    font-family: 'Open Sans', sans-serif; 
+}
+
+p{
+    font-size: 18px;
+}
+
+body{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+form{
+    text-align: center;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+button{
+    cursor: pointer;
+    align-self: center;
+    height: 30px;
+    border: none;
+    outline: none;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+  }
+
+h2{
+    text-align: center;
+}
+
+.btn-container{
+    display: flex;
+    justify-content: center;
+    border-style: solid;
+    border-color: snow;
+    border-radius: 20px;
+    background: snow;
+    margin-left: 40%;
+    margin-right: 40%;
+}
+
+.more-btn{
+    background: transparent;
+    height: 60px;
+    width: 200px;
+    font-size: 14px;
+}
+
+/* HEADER */
+header{
+    top: 0;
+    left: 0;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    z-index: 999;
+    
+    background-color: #fffafa;
+}
+
+.menu{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.menu > a{
+    color: black;
+    font-size: 20px;
+}
+
+header > h1{
+    font-family: 'Roboto', sans-serif;
+}
+
+@media (max-width: 700px) {
+    header{
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+    }
+    .menu{
+        align-self: center;
+    }
+}
+/* HEADER END */
+
+
+.info{
+    grid-area: info;
+}
+
+.about{
+    grid-area: about;
+}
+
+.products{
+    grid-area: products;
+}
+
+.reviews{
+    grid-area: reviews;
+}
+
+.countdown{
+    grid-area: countdown;
+}
+
+.footer{
+    grid-area: footer;
+}
+
+
+main{
+    width: 100%;
+    padding-top: 120px;
+    display: grid;
+    grid-template-areas:
+    "info"
+    "about"
+    "products"
+    "countdown"
+    "reviews"
+    "footer";
+}
+
+.main-box-init{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+/* INFO */
+.info{
+    display: flex;
+    justify-content: space-around;
+}
+
+.info > div{
+    width: 50%;
+    
+}
+
+.info-txt{
+    font-size: 50px;
+    align-content: center;
+}
+
+/* INFO END */
+
+
+/* ABOUT */
+.about{
+    background-color: #3A86FF;
+    padding: 20px;
+}
+
+.about > h2{
+    color: snow;
+}
+
+.about > p{
+    color: snow;
+}
+
+.about-p1-img{
+    text-align: center;
+}
+.about-p2-img{
+    text-align: center;
+}
+
+.about-p1-img > img{
+    width: 600px;
+}
+
+.about-p2-img > img{
+    width: 600px;
+}
+/* ABOUT END */
+
+/* PRODUCTS */
+.products-desc{
+    text-align: center;
+}
+
+.products-grid{
+    display: grid;
+    padding: 3rem 0;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 30px;
+
+}
+
+.product{
+    display: grid;
+    position: relative;
+    width: 200px;
+    justify-self: center;
+}
+
+.product:hover{
+    border-radius: 20px;
+    background-color: #FFBE0B;
+    transition: 0.5s;
+    color: snow;
+}
+
+.product > p{
+    text-align: center;
+}
+
+.product-img{
+    position: relative;
+    width: 120px;
+    justify-self: center;
+}
+
+@media (max-width: 700px) {
+    .products-grid{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .product{
+        width: 300px;
+    }
+    .product-img{
+        width: 200px;
+    }
+}
+/* PRODUCTS END */
+
+/* REVIEWS */
+.reviews{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow: hidden;
+    background-color: #FF006E;
+    padding: 40px;
+}
+
+.reviews > h2{
+    color: snow;
+}
+
+.review-init{
+    overflow: hidden;
+    border-radius: 20px;
+    padding: 20px;
+    background-color: snow;
+}
+
+
+/* REVIEWS END */
+
+/* COUNTDOWN */
+.countdown {
+    display: inline-block;
+    font-weight: 100;
+    text-align: center;
+    font-size: 30px;
+  }
+  
+  .countdown-number {
+    padding: 10px;
+    border-radius: 15px;
+    background: #FFBE0B;
+    display: inline-block;
+  }
+  
+  .countdown-time {
+    color:snow;
+    padding: 15px;
+    border-radius: 15px;
+    background: #FB5607;
+    display: inline-block;
+  }
+  
+  .countdown-text {
+    color: snow;
+    display: block;
+    padding-top: 5px;
+    font-size: 16px;
+  }
+/* COUNTDOWN END */
+
+/* FOOTER */
+.footer{
+    left: 0;
+    width: 100%;
+    height: 100px;
+    margin-top: 15px;
+    z-index: 999;
+    display: flex;
+    justify-content: space-around;
+
+    background-color: #fffafa;
+}
+
+/* FOOTER END */

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Магазин мороженого</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="style.css">
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@500&display=swap');
+</style>
+</head>
+<body>
+    
+    <header>
+        <h1 onclick="mainPage()">Вкус прохлады</h1>
+        <div class="menu">
+                <a href="#info">О нас</a>
+                <a href="#products">Мороженое</a>
+                <a href="#reviews">Отзывы</a>
+                <a href="#contacts">Контакты</a>
+        </div>
+    </header>
+
+    <main class="main-container-init">
+        <section class="info main-box-init">
+            <div>
+                <span class="info-txt">Вернём Вас в детство</span>
+            </div>
+            <div>
+                <img src="img/info.png" class="info-img">
+            </div>
+        </section>
+        <section id="info" class="about main-box-init">
+            <h2>О нас</h2>
+            <p>Мороженое "Вкус прохлады" подарит Вам и Вашим близким незабываемые
+            ощущения. В нашей линейке представлено множество различных сортов
+            мороженого. В продуктах используется свежее и натуральное молоко.</p>
+            <div class="btn-container">
+                <button onclick="aboutPage()" class="more-btn" id="more-btn">
+                    Узнать больше
+                </button>
+            </div>
+        </section>
+
+        <div id="products" class="products main-box-init">
+            <h2 class="products-desc">Самые популярные вкусы</h2>
+
+            <section class="products-grid">
+                <article class="product">
+
+                    <p>Ванильный</p>
+                    <img src="img/product1.png" class="product-img">
+                    <p>Нежный ванильный вкус</p>
+                    <button class="product-btn" onclick="paymentPage()">
+                        Заказать
+                    </button>
+                </article>
+    
+                <article class="product">
+
+                    <p>Карамельный</p>
+                    <img src="img/product2.png" class="product-img">
+                    <p>Сладкий и насыщенный</p>
+                    <button class="product-btn" onclick="paymentPage()">
+                        Заказать
+                    </button>
+                </article>
+
+                <article class="product">
+
+                    <p>Шоколадный</p>
+                    <img src="img/product3.png" class="product-img">
+                    <p>Бессмертная классика</p>
+                    <button class="product-btn" onclick="paymentPage()">
+                        Заказать
+                    </button>
+                </article>
+
+                <article class="product">
+
+                    <p>Малиновый</p>
+                    <img src="img/product4.png" class="product-img">
+                    <p>Нежный и сладкий</p>
+                    <button class="product-btn" onclick="paymentPage()">
+                        Заказать
+                    </button>
+                </article>
+            </section>
+            <div class="btn-container">
+                <button class="more-btn" onclick="productsPage()">
+                    Больше мороженого!
+                </button>
+            </div>
+        </div>
+
+        <div id="countdown" class="countdown main-box-init">
+            <h3>Успейте купить по скидке до Нового года!</h3>
+            <div class="countdown-number">
+              <span class="days countdown-time"></span>
+              <span class="countdown-text">Дни</span>
+            </div>
+            <div class="countdown-number">
+              <span class="hours countdown-time"></span>
+              <span class="countdown-text">Часы</span>
+            </div>
+            <div class="countdown-number">
+              <span class="minutes countdown-time"></span>
+              <span class="countdown-text">Минуты</span>
+            </div>
+            <div class="countdown-number">
+              <span class="seconds countdown-time"></span>
+              <span class="countdown-text">Секунды</span>
+            </div>
+        </div>
+
+        <div id="reviews" class="reviews main-box-init">
+            <h2>Отзывы о нашей продукции</h2>
+
+            <div class="review-1 review-init">
+                <p><i>Я просто в восторге от этого мороженого.
+                Сразу чувствуется, что оно сделано из натуральных ингредиентов.</i></p>
+            </div>
+            
+            <div class="review-2 review-init">
+                <p><i>Нам надоело магазинное мороженое и мы решили заказать его у
+                "Вкуса прохлады" и не пожалели. Более вкусного мороженого ещё
+                никогда не пробовали. Рекомендуем теперь всем знакомым.</i></p>
+            </div>
+
+            <div class="review-3 review-init">
+                <p><i>Это самое вкусное мороженое, которое я когда-либо пробовала!
+                Я будто вернулась в детство! Теперь я покупаю это мороженое фурами.
+                Я даже уволилась с работы, я хочу посвятить всю свою
+                жизнь этому мороженому!</i></p>
+            </div>
+            <div class="btn-container">
+                <button class="more-btn" onclick="reviewsPage()">
+                    Больше отзывов
+                </button>
+            </div>
+        </div>
+        
+    </main>
+    <!-- Контакты -->
+    <footer id="contacts" class="footer">
+        <address>
+            Обратная связь: levitskydanielius@gmail.com
+        </address>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
