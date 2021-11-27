@@ -19,13 +19,13 @@ function mainPage(){
 }
 
 function getTimeRemaining(endtime) {
-    var t = Date.parse(endtime) - Date.parse(new Date());
-    var seconds = Math.floor((t / 1000) % 60);
-    var minutes = Math.floor((t / 1000 / 60) % 60);
-    var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
-    var days = Math.floor(t / (1000 * 60 * 60 * 24));
+    var time = Date.parse(endtime) - Date.parse(new Date());
+    var seconds = Math.floor((time / 1000) % 60);
+    var minutes = Math.floor((time / 1000 / 60) % 60);
+    var hours = Math.floor((time / (1000 * 60 * 60)) % 24);
+    var days = Math.floor(time / (1000 * 60 * 60 * 24));
     return {
-      'total': t,
+      'total': time,
       'days': days,
       'hours': hours,
       'minutes': minutes,
@@ -33,7 +33,7 @@ function getTimeRemaining(endtime) {
     };
   }
    
-  function initializeClock(id, endtime) {
+  function initializeClock(id, deadline) {
     var clock = document.getElementById(id);
     var daysSpan = clock.querySelector('.days');
     var hoursSpan = clock.querySelector('.hours');
@@ -41,14 +41,14 @@ function getTimeRemaining(endtime) {
     var secondsSpan = clock.querySelector('.seconds');
    
     function updateClock() {
-      var t = getTimeRemaining(endtime);
+      var time = getTimeRemaining(deadline);
    
-      daysSpan.innerHTML = t.days;
-      hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
-      minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
-      secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+      daysSpan.innerHTML = time.days;
+      hoursSpan.innerHTML = ('0' + time.hours).slice(-2);
+      minutesSpan.innerHTML = ('0' + time.minutes).slice(-2);
+      secondsSpan.innerHTML = ('0' + time.seconds).slice(-2);
    
-      if (t.total <= 0) {
+      if (time.total <= 0) {
         clearInterval(timeinterval);
       }
     }
