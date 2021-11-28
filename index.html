@@ -2,7 +2,7 @@
 <html>
 <head>
 <title>Магазин мороженого</title>
-<meta charset="UTF-8">
+<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 <link type="image/x-icon" href="img/favicon.ico" rel="shortcut icon">
 <link rel="stylesheet" href="style.css">
 <style>
@@ -10,10 +10,11 @@
 </style>
 </head>
 <body>
-    
+
     <header>
         <h1 onclick="mainPage()">Вкус прохлады</h1>
         <div class="menu">
+            <!-- меню с использованием якорных ссылок -->
                 <a href="#info">О нас</a>
                 <a href="#products">Мороженое</a>
                 <a href="#reviews">Отзывы</a>
@@ -93,6 +94,7 @@
             </div>
         </div>
 
+        <!-- обратный отсчёт -->
         <div id="countdown" class="countdown main-box-init">
             <h3>Успейте купить по скидке до Нового года!</h3>
             <div class="countdown-number">

@@ -1,3 +1,4 @@
+/* ОБЩИЕ ПРАВИЛА ДЛЯ ВСЕХ СТРАНИЦ */
 *{
     font-family: 'Open Sans', sans-serif; 
 }
@@ -35,7 +36,9 @@ img{
 h2{
     text-align: center;
 }
+/* КОНЕЦ ОБЩИХ ПРАВИЛ ДЛЯ ВСЕХ СТРАНИЦ */
 
+/* Настройка дизайна кнопок и корректного отображения текста в них*/
 .btn-container{
     display: flex;
     justify-content: center;
@@ -53,6 +56,7 @@ h2{
     width: 200px;
     font-size: 14px;
 }
+/*  */
 
 /* HEADER */
 header{
@@ -82,7 +86,8 @@ header > h1{
     font-family: 'Roboto', sans-serif;
 }
 
-@media (max-width: 700px) {
+/* задаём поведение header'а на мобильном устройстве */
+@media (max-width: 730px) {
     header{
         flex-direction: column;
         text-align: center;
@@ -90,6 +95,9 @@ header > h1{
     }
     .menu{
         align-self: center;
+    }
+    .menu > a{
+        font-size: 15px;
     }
 }
 /* HEADER END */
@@ -119,7 +127,7 @@ header > h1{
     grid-area: footer;
 }
 
-
+/* размещаем блоки с контентом последовательно, с помощью grid */
 main{
     width: 100%;
     padding-top: 120px;
@@ -192,6 +200,7 @@ main{
     text-align: center;
 }
 
+/* задаём сетку продуктов */
 .products-grid{
     display: grid;
     padding: 3rem 0;
@@ -207,6 +216,7 @@ main{
     justify-self: center;
 }
 
+/* изменяем карточку при наведении */
 .product:hover{
     border-radius: 20px;
     background-color: #FFBE0B;
@@ -224,7 +234,8 @@ main{
     justify-self: center;
 }
 
-@media (max-width: 700px) {
+/* задаём поведение на мобильном устройстве */
+@media (max-width: 730px) {
     .products-grid{
         display: flex;
         flex-direction: column;
@@ -292,6 +303,16 @@ main{
     padding-top: 5px;
     font-size: 16px;
   }
+/* задаём поведение на мобильном устройстве */
+  @media (max-width: 730px) {
+      .countdown{
+          font-size: 15px;
+      }
+      .countdown-text{
+          font-size: 10px;
+      }
+  }
+
 /* COUNTDOWN END */
 
 /* FOOTER */

@@ -1,3 +1,4 @@
+// функции для перехода между страницами
 function aboutPage(){
     location.href = "about.html";
 }
@@ -18,6 +19,7 @@ function mainPage(){
     location.href = "index.html";
 }
 
+// функция для получения оставшегося времени
 function getTimeRemaining(endtime) {
     var time = Date.parse(endtime) - Date.parse(new Date());
     var seconds = Math.floor((time / 1000) % 60);
@@ -32,14 +34,15 @@ function getTimeRemaining(endtime) {
       'seconds': seconds
     };
   }
-   
+  
+  // функция для создания часов
   function initializeClock(id, deadline) {
     var clock = document.getElementById(id);
     var daysSpan = clock.querySelector('.days');
     var hoursSpan = clock.querySelector('.hours');
     var minutesSpan = clock.querySelector('.minutes');
     var secondsSpan = clock.querySelector('.seconds');
-   
+    // функция для обновления часов
     function updateClock() {
       var time = getTimeRemaining(deadline);
    
